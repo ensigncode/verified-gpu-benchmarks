@@ -1,0 +1,27 @@
+{
+  "run": 62,
+  "source_archive_sha256": "4b6098b734f97e3f36f6b828ee133c32009007e1689504fd4b5958e5fd9a888d",
+  "hardware": "NVIDIA H100 SXM",
+  "workflow_result": "failure",
+  "custom_kernel_gate": "skipped",
+  "serving_backends": [
+    {
+      "backend": "baseline",
+      "output_tokens_per_second": 4789.79,
+      "serial_outputs_matched": 6,
+      "serial_outputs_compared": 6
+    },
+    {
+      "backend": "vllm_auto",
+      "output_tokens_per_second": 4522.86,
+      "serial_outputs_matched": 6,
+      "serial_outputs_compared": 6
+    },
+    {
+      "backend": "flashinfer",
+      "output_tokens_per_second": 4215.1,
+      "serial_outputs_matched": 4,
+      "serial_outputs_compared": 6
+    }
+  ]
+}

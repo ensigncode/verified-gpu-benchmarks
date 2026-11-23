@@ -1,0 +1,16 @@
+{
+  "run": 81,
+  "source_archive_sha256": "f20ae0fa3b0a200169e5e0e8b52387111892477102349f26cc9aff4588687f9d",
+  "environment": "staging",
+  "verdict": "PASS",
+  "candidate_traffic_percent": [
+    0,
+    10,
+    50,
+    0
+  ],
+  "injected_p99_latency_ms": 900,
+  "final_state": "ROLLED_BACK",
+  "active_streams_completed": 4,
+  "post_rollback_candidate_admissions": 0
+}

@@ -1,0 +1,41 @@
+{
+  "audit_date": "2026-11-22",
+  "source_pdf_sha256": "d4fd955fbbc6d4636257a855f7eaa0dd651dbfac6defbbad627974591617ad6c",
+  "offline_cpu_integration": "passed",
+  "release": "v1.1 on hold",
+  "h100": {
+    "workload": "Six Qwen FP16 requests, 384 output tokens",
+    "baseline_tokens_per_second": 287.1,
+    "native_fallback": {
+      "default": true,
+      "matched": 6,
+      "total": 6,
+      "tokens_per_second": 289.3
+    },
+    "custom_kernel": {
+      "opt_in": true,
+      "matched": 3,
+      "total": 6,
+      "tokens_per_second": 246.6
+    }
+  },
+  "l40s": {
+    "scope": "FP16 batch 32, context 4096, head dimension 64, page size 16",
+    "four_head_ms": 0.3062,
+    "grouped_ms": 0.3232
+  },
+  "a100": {
+    "scope": "Batch 32, context 2048",
+    "baseline_workspace_mib": 16.25,
+    "low_memory_workspace_mib": 8.125
+  },
+  "h200": {
+    "scope": "FP16 decode, batch 8, context 4096, page size 16",
+    "baseline_ms": 0.187,
+    "candidate_ms": 0.2259
+  },
+  "b200": {
+    "scope": "Historical v1.0 calibration only",
+    "v1_1_measured": false
+  }
+}
